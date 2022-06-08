@@ -962,3 +962,9 @@ vendor/lib/libwfduibcsrcinterface_proprietary.so
 vendor/lib/libwfdutils_proprietary.so
 vendor/lib/vendor.qti.hardware.wifidisplaysession@1.0.so
 vendor/lib/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
+
+# Diag HAL
+-vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml
+vendor/bin/diag-router
+vendor/etc/init/vendor.qti.diag.rc
+vendor/lib64/vendor.qti.diaghal@1.0.so
