@@ -162,6 +162,10 @@ persist.vendor.dpm.idletimer.mode=default
 persist.vendor.dpm.nsrm.bkg.evt=3955
 persist.vendor.dpmhalservice.enable=1
 
+# Dolby Vision
+ro.vendor.audio.dolby.vision.support=true
+debug.config.media.video.dolby_vision_suports=true
+
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
