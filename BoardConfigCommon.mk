@@ -259,6 +259,9 @@ SOONG_CONFIG_NAMESPACES += xiaomiSm8350Vars
 SOONG_CONFIG_xiaomiSm8350Vars += \
     vibrator_use_effect_stream
 SOONG_CONFIG_xiaomiSm8350Vars_vibrator_use_effect_stream ?= false
+
+# Userfaultfd GC
+OVERRIDE_ENABLE_UFFD_GC := true
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
