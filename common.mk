@@ -245,6 +245,10 @@ PRODUCT_PACKAGES += \
     XiaomiSM8350SettingsOverlay \
     XiaomiSM8350SystemUIOverlay \
     DeviceAsWebcamOverlayCommon
+
+# Parts
+PRODUCT_PACKAGES += \
+    DVParts
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
