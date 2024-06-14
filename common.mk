@@ -348,7 +348,8 @@ PRODUCT_PACKAGES += \
     NcmTetheringOverlay \
     SettingsOverlaySM8350 \
     SystemUIOverlaySM8350 \
-    WifiOverlaySM8350
+    WifiOverlaySM8350 \
+    DeviceAsWebcamOverlayCommon
 
 # Partitions
 PRODUCT_PACKAGES += \
