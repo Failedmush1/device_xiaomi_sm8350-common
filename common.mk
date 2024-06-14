@@ -320,7 +320,8 @@ PRODUCT_PACKAGES += \
     NcmTetheringOverlay \
     SettingsOverlaySM8350 \
     SystemUIOverlaySM8350 \
-    WifiOverlaySM8350
+    WifiOverlaySM8350 \
+    DeviceAsWebcamOverlayCommon
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rro_overlays/config-vendor.xml:$(TARGET_COPY_OUT_VENDOR)/overlay/config/config.xml
