@@ -184,6 +184,14 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_PACKAGES += \
+    libmm-omxcore \
+    libOmxAacEnc \
+    libOmxAmrEnc \
+    libOmxCore \
+    libOmxEvrcEnc \
+    libOmxG711Enc \
+    libOmxQcelp13Enc \
+    libstagefrighthw \
     libcodec2_soft_common.vendor \
     libsfplugin_ccodec_utils.vendor \
     libcodec2_vndk.vendor \
@@ -199,6 +207,14 @@ PRODUCT_COPY_FILES += \
     $(foreach f,$(wildcard $(LOCAL_PATH)/configs/media/*.xml),$(f):$(TARGET_COPY_OUT_VENDOR)/etc/$(notdir $(f))) \
     $(foreach dir,$(MEDIA_SUBDIRS), \
         $(foreach f,$(wildcard $(LOCAL_PATH)/configs/media/$(dir)/*.xml),$(f):$(TARGET_COPY_OUT_VENDOR)/etc/$(notdir $(f))))
+
+# Media - Dolby vision
+PRODUCT_PACKAGES += \
+    android.hardware.media.c2@1.2.vendor \
+    libcodec2_hidl@1.2.vendor \
+    libcodec2_hidl@1.0.vendor \
+    libcodec2_soft_common.vendor \
+    libsfplugin_ccodec_utils.vendor \
 
 # Mlipay
 PRODUCT_PACKAGES += \
@@ -300,6 +316,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     hardware/xiaomi/aidl/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
+
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v33/arm/arch-arm-armv7-a-neon/shared/vndk-core/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_foundation-v33.so \
+    prebuilts/vndk/v33/arm64/arch-arm64-armv8-a/shared/vndk-core/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_foundation-v33.so
 
 # Verified boot
 PRODUCT_COPY_FILES += \
