@@ -200,6 +200,8 @@ PRODUCT_COPY_FILES += \
     prebuilts/vndk/v30/arm64/arch-arm-armv8-a/shared/vndk-core/libziparchive.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libziparchive.so \
     prebuilts/vndk/v30/arm/arch-arm-armv7-a-neon/shared/vndk-core/libziparchive.so:$(TARGET_COPY_OUT_VENDOR)/lib/libziparchive.so
 
+$(call soong_config_set,stagefright,target_disable_thumbnail_block_model,true)
+
 # Native libraries whitelist
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
