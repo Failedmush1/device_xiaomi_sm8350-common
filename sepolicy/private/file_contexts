@@ -1,2 +1,3 @@
 # Executables
 /system/bin/chargeonlymode    u:object_r:chargeonlymode_exec:s0
+
