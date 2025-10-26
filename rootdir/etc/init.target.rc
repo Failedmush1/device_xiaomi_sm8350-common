@@ -169,6 +169,13 @@ on charger
     start vendor.power_off_alarm
     setprop sys.usb.controller a600000.dwc3
     setprop sys.usb.configfs 1
+
+service vendor.charger /system/bin/chargeonlymode
+    class charger
+    user system
+    group system graphics input
+    capabilities SYS_BOOT
+    seclabel u:r:charger:s0
     write /sys/module/lpm_levels/parameters/sleep_disabled N
 
 service vendor.lowi /vendor/bin/lowirpcd
