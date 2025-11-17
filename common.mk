@@ -98,6 +98,10 @@ PRODUCT_COPY_FILES += \
 # DebugFS
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
+# DeviceAsWebcam
+PRODUCT_PACKAGES += \
+    DeviceAsWebcam
+
 # Display
 TARGET_GRALLOC_HANDLE_HAS_NO_RESERVED_SIZE := true
 
