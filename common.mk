@@ -187,22 +187,14 @@ PRODUCT_PACKAGES += \
     libavservices_minijail \
     libavservices_minijail.vendor
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/media/lahaina/media_codecs_lahaina.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_lahaina.xml \
-    $(LOCAL_PATH)/configs/media/lahaina/media_codecs_performance_lahaina.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_lahaina.xml \
-    $(LOCAL_PATH)/configs/media/lahaina/media_profiles_lahaina.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_lahaina.xml
+# Define subfolders for shima, lahaina, yupik
+MEDIA_SUBDIRS := lahaina shima yupik
 
+# Copy ALL XMLs from main folder and subfolders to /vendor/etc/
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/media/shima/media_codecs_performance_shima_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_shima_v1.xml \
-    $(LOCAL_PATH)/configs/media/shima/media_codecs_system_default_shima.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_system_default_shima.xml \
-    $(LOCAL_PATH)/configs/media/shima/media_codecs_shima_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_shima_v1.xml \
-    $(LOCAL_PATH)/configs/media/shima/media_profiles_shima_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_shima_v1.xml
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/media/yupik/media_codecs_performance_yupik_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_yupik_v1.xml \
-    $(LOCAL_PATH)/configs/media/yupik/media_codecs_system_default_yupik.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_system_default_yupik.xml \
-    $(LOCAL_PATH)/configs/media/yupik/media_codecs_yupik_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_yupik_v1.xml \
-    $(LOCAL_PATH)/configs/media/yupik/media_profiles_yupik_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_yupik_v1.xml
+    $(foreach f,$(wildcard $(LOCAL_PATH)/configs/media/*.xml),$(f):$(TARGET_COPY_OUT_VENDOR)/etc/$(notdir $(f))) \
+    $(foreach dir,$(MEDIA_SUBDIRS), \
+        $(foreach f,$(wildcard $(LOCAL_PATH)/configs/media/$(dir)/*.xml),$(f):$(TARGET_COPY_OUT_VENDOR)/etc/$(notdir $(f))))
 
 # Mlipay
 PRODUCT_PACKAGES += \
