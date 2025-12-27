@@ -66,15 +66,14 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
-    hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
-    hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml \
-    vendor/oneplus/dolby/vintf/dolby_framework_compatibility_matrix.xml
+    hardware/qcom-caf/common/vendor_framework_compatibi
+lity_matrix.xml \
+    hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml
 
 DEVICE_MANIFEST_FILE := \
     $(COMMON_PATH)/hidl/manifest_lahaina.xml \
     $(COMMON_PATH)/hidl/manifest_xiaomi.xml
-    $vendor/oneplus/dolby/vintf/dolby_manifest.xml
-
+vendor/oneplus/dolby/vintf/dolby_manifest.xml
 ifeq ($(TARGET_HAS_UDFPS),true)
 DEVICE_MANIFEST_FILE += \
     $(COMMON_PATH)/hidl/manifest_udfps.xml
