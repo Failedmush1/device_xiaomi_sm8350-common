@@ -274,20 +274,15 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set_bool,lineage_health,charging_control_supports_bypass,false)
 
-# Media
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/media/init.qti.media.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.media.sh \
-    $(LOCAL_PATH)/media/init.qti.media.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qti.media.rc
+# Define all source directories (the main media folder + subfolders)
+MEDIA_DIRS := $(LOCAL_PATH)/media $(addprefix $(LOCAL_PATH)/media/, lahaina shima yupik)
 
-# Define subfolders for shima, lahaina, yupik
-MEDIA_SUBDIRS := lahaina shima yupik
+# Find all XML files across all defined directories
+MEDIA_XML_FILES := $(foreach dir,$(MEDIA_DIRS),$(wildcard $(dir)/*.xml))
 
-# Copy ALL XMLs from the main media folder and specified subfolders to /vendor/etc/
-# This automatically covers files like media_codecs.xml and media_codecs_shima_v*.xml
+# Map them all to $(TARGET_COPY_OUT_VENDOR)/etc/
 PRODUCT_COPY_FILES += \
-    $(foreach f,$(wildcard $(LOCAL_PATH)/media/*.xml),$(f):$(TARGET_COPY_OUT_VENDOR)/etc/$(notdir $(f))) \
-    $(foreach dir,$(MEDIA_SUBDIRS), \
-        $(foreach f,$(wildcard $(LOCAL_PATH)/media/$(dir)/*.xml),$(f):$(TARGET_COPY_OUT_VENDOR)/etc/$(notdir $(f))))
+    $(foreach f,$(MEDIA_XML_FILES),$(f):$(TARGET_COPY_OUT_VENDOR)/etc/$(notdir $(f)))
 
 $(call soong_config_set_bool,stagefright,target_disable_thumbnail_block_model,true)
 
