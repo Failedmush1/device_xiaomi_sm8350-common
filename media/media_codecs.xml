@@ -5,7 +5,6 @@
     <Include href="media_codecs_vendor_audio.xml" />
     <Include href="media_codecs_google_telephony.xml" />
     <Include href="media_codecs_c2_audio.xml" />
-    
     <Include href="media_codecs_system_default_shima.xml" />
     <Include href="media_codecs_with_dolby_shima.xml" />
     <Include href="media_codecs_performance_shima_v2.xml" />
