@@ -26,15 +26,16 @@
             <Limit name="frame-rate" range="1-480" />
             <Limit name="concurrent-instances" max="16" />
             <Feature name="adaptive-playback" />
+            <Limit name="performance-point-4096x2304" value="30" />
+            <Limit name="performance-point-3840x2160" value="60" />
         </MediaCodec>
 
         <MediaCodec name="c2.qti.avc.decoder.low_latency" type="video/avc">
             <Alias name="OMX.qcom.video.decoder.avc.low_latency"/>
             <Limit name="size" min="96x96" max="4096x2176" />
-            <Limit name="alignment" value="2x2" />
-            <Limit name="block-size" value="16x16" />
             <Feature name="adaptive-playback" />
             <Feature name="low-latency" />
+            <Limit name="performance-point-3840x2160" value="60" />
         </MediaCodec>
 
         <MediaCodec name="c2.qti.avc.decoder.secure" type="video/avc" >
@@ -50,22 +51,24 @@
             <Limit name="profile" value="1,2" />
             <Limit name="level" value="1,2,4,8,16,32,64,128,256,512,1024,2048,4096,8192" />
             <Feature name="adaptive-playback" />
-            <Feature name="can-swap-width-height" value="1" />
+            <Limit name="performance-point-3840x2160" value="60" />
+        </MediaCodec>
+
+        <MediaCodec name="c2.qti.hevc.decoder.secure" type="video/hevc" >
+            <Alias name="OMX.qcom.video.decoder.hevc.secure"/>
+            <Limit name="size" min="96x96" max="4096x2176" />
+            <Feature name="secure-playback" required="true" />
         </MediaCodec>
 
         <MediaCodec name="c2.qti.vp9.decoder" type="video/x-vnd.on2.vp9" >
             <Alias name="OMX.qcom.video.decoder.vp9"/>
             <Limit name="size" min="96x96" max="4096x2176" />
-            <Limit name="alignment" value="2x2" />
-            <Limit name="block-size" value="16x16" />
-            <Limit name="frame-rate" range="1-60" />
             <Feature name="adaptive-playback" />
         </MediaCodec>
 
         <MediaCodec name="c2.qti.mpeg2.decoder" type="video/mpeg2" >
             <Alias name="OMX.qcom.video.decoder.mpeg2"/>
             <Limit name="size" min="96x96" max="1920x1088" />
-            <Feature name="adaptive-playback" />
         </MediaCodec>
     </Decoders>
 
@@ -74,7 +77,6 @@
             <Alias name="OMX.qcom.video.encoder.avc"/>
             <Limit name="size" min="128x128" max="4096x2176" />
             <Limit name="bitrate" range="1-100000000" />
-            <Limit name="frame-rate" range="1-480" />
             <Feature name="bitrate-modes" value="VBR,CBR" />
         </MediaCodec>
 
@@ -82,14 +84,20 @@
             <Alias name="OMX.qcom.video.encoder.hevc"/>
             <Limit name="size" min="128x128" max="4096x2176" />
             <Limit name="bitrate" range="1-160000000" />
-            <Limit name="profile" value="1,2" />
             <Feature name="bitrate-modes" value="VBR,CBR" />
-            <Feature name="can-swap-width-height" value="1" />
+        </MediaCodec>
+
+        <MediaCodec name="c2.qti.hevc.encoder.cq" type="video/hevc">
+            <Alias name="OMX.qcom.video.encoder.hevc.cq"/>
+            <Limit name="size" min="128x128" max="512x512" />
+            <Limit name="quality" range="0-100" default="80" />
+            <Feature name="bitrate-modes" value="CQ" />
         </MediaCodec>
 
         <MediaCodec name="c2.qti.heic.encoder" type="image/vnd.android.heic">
             <Alias name="OMX.qcom.video.encoder.heic"/>
             <Limit name="size" min="512x512" max="16384x16384" />
+            <Limit name="quality" range="0-100" default="80" />
             <Feature name="bitrate-modes" value="CQ" />
         </MediaCodec>
     </Encoders>
