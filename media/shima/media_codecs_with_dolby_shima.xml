@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Included>
     <Decoders>
-            <MediaCodec name="c2.dolby.decoder.hevc" type="video/dolby-vision" rank="150">
+        <MediaCodec name="c2.dolby.decoder.hevc" type="video/dolby-vision" rank="150">
             <Limit name="size" min="96x96" max="4096x2176" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
@@ -60,6 +60,27 @@
             <Limit name="concurrent-instances" max="1" />
             <Limit name="performance-point-4096x2304" value="30" />
             <Limit name="performance-point-3840x2160" value="60" />
+        </MediaCodec>
+
+        <MediaCodec name="c2.dolby.eac3.decoder" >
+            <Type name="audio/ac3">
+                <Alias name="OMX.dolby.ac3.decoder" />
+                <Limit name="channel-count" max="6" />
+                <Limit name="sample-rate" ranges="32000,44100,48000" />
+                <Limit name="bitrate" range="32000-640000" />
+            </Type>
+            <Type name="audio/eac3">
+                <Alias name="OMX.dolby.eac3.decoder" />
+                <Limit name="channel-count" max="8" />
+                <Limit name="sample-rate" ranges="32000,44100,48000" />
+                <Limit name="bitrate" range="32000-6144000" />
+            </Type>
+            <Type name="audio/eac3-joc">
+                <Alias name="OMX.dolby.eac3-joc.decoder" />
+                <Limit name="channel-count" max="16" />
+                <Limit name="sample-rate" ranges="48000" />
+                <Limit name="bitrate" range="32000-6144000" />
+            </Type>
         </MediaCodec>
     </Decoders>
 </Included>
