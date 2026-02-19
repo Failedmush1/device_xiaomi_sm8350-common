@@ -254,7 +254,7 @@ SOONG_CONFIG_ufsbsg += ufsframework
 SOONG_CONFIG_ufsbsg_ufsframework := bsg
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2024-08-01
+VENDOR_SECURITY_PATCH := 2025-11-01
 
 # Sepolicy
 include vendor/aospa/sepolicy/sepolicy.mk

@@ -1,5 +1,6 @@
-# All unpinned blobs below are extracted from haydn V816.0.18.0.UKKMIXM
-
+# All unpinned blobs below are extracted from redwood OS2.0.17.0.UMSMIXM
+# dada: dada OS2.0.217.0.WOCMIXM
+# sunstone: sunstone OS2.0.4.0.UMQMIXM
 # ADSP
 vendor/bin/adsprpcd
 vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc
@@ -628,6 +629,21 @@ vendor/lib64/jcos_nq_client.so
 vendor/lib64/ls_nq_client.so
 vendor/lib64/se_nq_extn_client.so
 
+<<<<<<< HEAD
+=======
+# Sensors
+vendor/lib64/libssccalapi.so;DUMMY_SHARED_LIB
+
+# Sensors (citsensor)
+vendor/bin/hw/vendor.xiaomi.hardware.citsensorservice@1.1-service
+vendor/etc/init/vendor.xiaomi.hardware.citsensorservice@1.1-service.rc
+vendor/etc/vintf/manifest/vendor.xiaomi.hardware.citsensorservice@1.1-service.xml
+vendor/lib64/hw/vendor.xiaomi.hardware.citsensorservice@1.1-impl.so
+vendor/lib64/libmisight.so
+vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.0.so
+vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.1.so
+
+>>>>>>> 1e760b0f (sm8350-common: Update blobs to redwood OS2.0.17.0.UMSMIXM)
 # Snapdragon Computer Vision Engine
 vendor/lib/libscveCommon.so
 vendor/lib/libscveCommon_stub.so
