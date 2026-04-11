@@ -79,6 +79,8 @@ DEVICE_MANIFEST_FILE += \
     $(COMMON_PATH)/hidl/manifest_udfps.xml
 endif
 
+DEVICE_MANIFEST_FILE += $(COMMON_PATH)/hidl/c2_manifest_vendor.xml
+
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_IMAGE_NAME := Image
