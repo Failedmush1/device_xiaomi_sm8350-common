@@ -71,6 +71,10 @@ function blob_fixup() {
         vendor/etc/qcril_database/upgrade/config/10.0_config.sql)
             sed -i '/persist.vendor.radio.redir_party_num/ s/true/false/g' "${2}"
             ;;
+        vendor/etc/vintf/manifest/c2_manifest_vendor.xml)
+            sed -i "/ozoaudio/d" "${2}"
+            sed -i "/dolby/d" "${2}"
+            ;;
     esac
 }
 

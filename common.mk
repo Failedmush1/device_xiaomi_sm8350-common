@@ -38,6 +38,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_io_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_yupik/audio_io_policy.conf \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_yupik/audio_policy_configuration.xml
 
+$(call inherit-product, hardware/dolby/dolby.mk)
+
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -182,7 +184,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcodec2_soft_common.vendor \
     libsfplugin_ccodec_utils.vendor \
-    libcodec2_vndk.vendor \
     libcodec2_hidl@1.0.vendor \
     libavservices_minijail \
     libavservices_minijail.vendor
