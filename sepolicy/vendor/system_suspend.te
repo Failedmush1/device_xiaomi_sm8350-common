@@ -1,0 +1,1 @@
+allow system_suspend_server vendor_sysfs_wakeup:file r_file_perms;
