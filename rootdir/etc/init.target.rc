@@ -135,6 +135,14 @@ on boot
 
     write /dev/cpuset/audio-app/cpus 1-2
     # init the  cpuset value for the camera background,don't change the oder
+    mkdir /dev/cpuset/camera-background
+    mkdir /dev/cpuset/camera-background/background
+    chown system system /dev/cpuset/camera-background
+    chown system system /dev/cpuset/camera-background/background
+    chown system system /dev/cpuset/camera-background/tasks
+    chown system system /dev/cpuset/camera-background/background/tasks
+    chmod 0664 /dev/cpuset/camera-background/tasks
+    chmod 0664 /dev/cpuset/camera-background/background/tasks
     write /dev/cpuset/camera-background/background/cpus 0-2
     write /dev/cpuset/camera-background/cpus 0-3
 
