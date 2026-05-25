@@ -1,3 +1,6 @@
+# Suspend
+/sys/devices/system/cpu/wakeup(.*)?                                       u:object_r:vendor_sysfs_wakeup:s0
+
 # Audio
 /dev/socket/audio_hw_socket                                             u:object_r:audio_socket:s0
 /dev/elliptic(.*)?                    u:object_r:sound_device:s0
