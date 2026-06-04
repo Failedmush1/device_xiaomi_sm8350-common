@@ -212,3 +212,6 @@ WIFI_FEATURE_HOSTAPD_11AX := true
 
 # Inherit proprietary blobs
 include vendor/xiaomi/sm8350-common/BoardConfigVendor.mk
+
+# VINTF
+BUILD_BROKEN_VINTF_PRODUCT_COPY_FILES := true
