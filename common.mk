@@ -101,7 +101,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@3.0
 
 # Dolby
-$(call inherit-product-if-exists, hardware/dolby/dolby.mk)
+# $(call inherit-product-if-exists, hardware/dolby/dolby.mk)
 
 
 # DRM
