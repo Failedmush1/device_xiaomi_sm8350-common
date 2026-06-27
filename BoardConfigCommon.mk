@@ -8,7 +8,6 @@ COMMON_PATH := device/xiaomi/sm8350-common
 # A/B
 AB_OTA_PARTITIONS += \
     boot \
-    dtbo \
     odm \
     product \
     system \
@@ -79,15 +78,16 @@ endif
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/hidl/c2_manifest_vendor.xml
 
 # Kernel
+TARGET_KERNEL_SOURCE := kernel/xiaomi/sm8350
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
-BOARD_KERNEL_SEPARATED_DTBO := true
+#BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_KERNEL_IMAGE_NAME := Image
 
 BOARD_BOOT_HEADER_VERSION := 3
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
-KERNEL_DEFCONFIG := vendor/xiaomi_lahaina-qgki_defconfig
+TARGET_KERNEL_CONFIG := vendor/lahaina-qgki_defconfig
 
 BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0
 BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom
@@ -198,3 +198,5 @@ CONFIG_IEEE80211AX := true
 
 # Inherit proprietary blobs
 include vendor/xiaomi/sm8350-common/BoardConfigVendor.mk
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += device/xiaomi/sm8350-common/vintf/xiaomi_framework_compatibility_matrix.xml
+SKIP_VINTF_CHECK := true
