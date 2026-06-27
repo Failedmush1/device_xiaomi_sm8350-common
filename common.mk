@@ -222,10 +222,10 @@ PRODUCT_PACKAGES += \
     DVParts
 
 # Partitions
-PRODUCT_PACKAGES += \
-    vendor_bt_firmware_mountpoint \
-    vendor_dsp_mountpoint \
-    vendor_firmware_mnt_mountpoint
+#PRODUCT_PACKAGES += \
+#    vendor_bt_firmware_mountpoint \
+#    vendor_dsp_mountpoint \
+#    vendor_firmware_mnt_mountpoint
 
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -254,8 +254,8 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/xiaomi
 
 # Ueventd
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/rootdir/etc/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc
 
 # Update engine
 PRODUCT_PACKAGES += \
