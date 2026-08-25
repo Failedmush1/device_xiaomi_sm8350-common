@@ -26,6 +26,9 @@ $(call inherit-product, hardware/qcom-caf/common/common.mk)
 # API
 PRODUCT_SHIPPING_API_LEVEL := 30
 
+# VINTF
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
+
 # Audio
 TARGET_INCLUDES_DOLBY := true
 
