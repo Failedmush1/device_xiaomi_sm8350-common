@@ -1,3 +1,6 @@
+# Powershare
+/vendor/bin/hw/vendor\.lineage\.powershare-service\.default               u:object_r:hal_lineage_powershare_default_exec:s0
+
 # Suspend
 /sys/devices/system/cpu/wakeup(.*)?                                       u:object_r:vendor_sysfs_wakeup:s0
 /dev/socket/audio_hw_socket                                               u:object_r:audio_socket:s0
