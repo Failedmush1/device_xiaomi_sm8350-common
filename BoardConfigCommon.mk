@@ -143,6 +143,10 @@ TARGET_COPY_OUT_PRODUCT := product
 # Platform
 TARGET_BOARD_PLATFORM := lahaina
 
+# Display / Gralloc
+TARGET_GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE := false
+TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE := true
+
 # Properties
 TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
 TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
@@ -168,7 +172,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 VENDOR_SECURITY_PATCH := 2025-11-01
 
 # Sepolicy
-include device/lineage/sepolicy/libion/sepolicy.mk
+include device/hertzify/sepolicy/libion/sepolicy.mk
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
