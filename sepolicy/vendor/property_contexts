@@ -14,6 +14,6 @@ persist.vendor.sys.provision.status     u:object_r:vendor_mlipay_prop:s0
 
 # Dolby Properties
 ro.vendor.dolby.dax.version            u:object_r:exported_system_prop:s0
-ro.vendor.audio.dolby.dax.support      u:object_r:exported_system_prop:s0
+#ro.vendor.audio.dolby.dax.support      u:object_r:exported_system_prop:s0
 ro.vendor.audio.dolby.dax.version      u:object_r:exported_system_prop:s0
 ro.vendor.audio.dolby.surround.enable  u:object_r:exported_system_prop:s0
