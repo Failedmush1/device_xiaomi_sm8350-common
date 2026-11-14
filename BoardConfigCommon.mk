@@ -41,11 +41,15 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := kryo385
 
 
+# Audio
+AUDIO_FEATURE_ENABLED_GKI := true
+
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 
 # Display
 TARGET_SCREEN_DENSITY ?= 440
+TARGET_USES_5.4_KERNEL := true
 
 # Dolby Vision
 SOONG_CONFIG_NAMESPACES += dolby_vision
