@@ -58,6 +58,12 @@
          Equivalent to 67/255 (default for this device)    -->
     <item name="config_screenBrightnessSettingDefaultFloat" format="float" type="dimen">0.26274509804</item>
 
+
+    <!-- Flag indicating whether we should enable the automatic brightness in Settings. -->
+    <bool name="config_automatic_brightness_available">true</bool>
+
+    <!-- Auto-brightness sensor type string -->
+    <string name="config_displayLightSensorType">android.sensor.light</string>
     <!-- Whether device supports double tap to wake -->
     <bool name="config_supportDoubleTapWake">true</bool>
 
