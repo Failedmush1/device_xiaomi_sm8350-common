@@ -586,4 +586,14 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>MwqemAdapter</instance>
         </interface>
     </hal>
+    <!-- Dolby Codec2 HAL service -->
+    <hal format="hidl">
+        <name>android.hardware.media.c2</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IComponentStore</name>
+            <instance>dolby</instance>
+        </interface>
+    </hal>
 </manifest>
