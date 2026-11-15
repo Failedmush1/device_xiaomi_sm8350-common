@@ -207,10 +207,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
-# Neural Network
-PRODUCT_PACKAGES += \
-    android.hardware.neuralnetworks@1.3.vendor
-
+# Neural Network (Deprecated in Android 15)
+#PRODUCT_PACKAGES += \
+#    android.hardware.neuralnetworks@1.3.vendor
 # Overlays
 PRODUCT_PACKAGES += \
     XiaomiSM8350CarrierConfigOverlay \
