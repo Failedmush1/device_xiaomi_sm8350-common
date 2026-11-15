@@ -251,6 +251,9 @@ TARGET_COMMON_QTI_COMPONENTS := \
     wfd \
     wlan
 
+# USB
+PRODUCT_HAS_GADGET_HAL := true
+
 # RIL
 PRODUCT_PACKAGES += \
 
