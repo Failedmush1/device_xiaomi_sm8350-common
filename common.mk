@@ -220,8 +220,6 @@ PRODUCT_ENABLE_UFFD_GC := false
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
-<<<<<<< HEAD
-=======
 $(call soong_config_set_bool,lineage_health,charging_control_supports_bypass,false)
 
 # Media
@@ -298,7 +296,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
 PRODUCT_HAS_GADGET_HAL := true
 
 # RIL
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += 
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -359,7 +357,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
 
 # WiFi
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += 
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
