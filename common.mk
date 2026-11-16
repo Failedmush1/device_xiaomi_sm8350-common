@@ -180,6 +180,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
      IFAAService
 
+# ION
+$(call soong_config_set,libion,legacy_impl,true)
+
+PRODUCT_PACKAGES += \
+    libion.vendor
+
 # Kernel
 KERNEL_MODULES_INSTALL := dlkm
 KERNEL_MODULES_OUT := $(OUT_DIR)/target/product/$(AOSPA_BUILD)/$(KERNEL_MODULES_INSTALL)/lib/modules
