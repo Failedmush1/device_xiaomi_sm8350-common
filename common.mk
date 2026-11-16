@@ -172,13 +172,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
      IFAAService
 
-# IR
-PRODUCT_PACKAGES += \
-    android.hardware.ir-service.xiaomi
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml
-
 # Kernel
 KERNEL_MODULES_INSTALL := dlkm
 KERNEL_MODULES_OUT := $(OUT_DIR)/target/product/$(AOSPA_BUILD)/$(KERNEL_MODULES_INSTALL)/lib/modules
