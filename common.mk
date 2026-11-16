@@ -206,7 +206,7 @@ PRODUCT_PACKAGES += \
      IFAAService
 
 # ION
-$(call soong_config_set,libion,legacy_impl,true)
+$(call soong_config_set_bool,libion,legacy_impl,true)
 
 PRODUCT_PACKAGES += \
     libion.vendor
