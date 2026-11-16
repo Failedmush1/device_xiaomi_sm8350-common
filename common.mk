@@ -53,8 +53,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
 
 $(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
-
->>>>>>> 7eba2813 (sm8350-common: Opt out of speaker_layout_channel_mask field)
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -73,9 +71,16 @@ PRODUCT_PACKAGES += \
     otapreopt_script
 
 # Bluetooth
+PRODUCT_PACKAGES += \
+    audio.bluetooth.default \
+    android.hardware.bluetooth.audio-impl
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
+    frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml
+
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.vendor.btstack.enable.lpa=true
-
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
