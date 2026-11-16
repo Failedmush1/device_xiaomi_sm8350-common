@@ -28,3 +28,8 @@ ro.vendor.qti.sys.fw.bservice_enable=true
 
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true
+
+# Radio
+DEVICE_PROVISIONED=1
+ril.subscription.types=NV,RUIM
+ro.baseband=msm
