@@ -242,8 +242,8 @@ PRODUCT_PACKAGES += \
 
 # Camera (VNDK libziparchive ABI fix for Android 15)
 PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v30/arm64/arch-arm-armv8-a/shared/vndk-core/libziparchive.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libziparchive.so \
-    prebuilts/vndk/v30/arm/arch-arm-armv7-a-neon/shared/vndk-core/libziparchive.so:$(TARGET_COPY_OUT_VENDOR)/lib/libziparchive.so
+    prebuilts/vndk/v34/arm64/arch-arm-armv8-a/shared/vndk-core/libziparchive.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libziparchive.so \
+    prebuilts/vndk/v34/arm/arch-arm-armv7-a-neon/shared/vndk-core/libziparchive.so:$(TARGET_COPY_OUT_VENDOR)/lib/libziparchive.so
 
 $(call soong_config_set_bool,stagefright,target_disable_thumbnail_block_model,true)
 
