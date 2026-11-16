@@ -72,8 +72,15 @@ PRODUCT_PACKAGES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0.vendor \
     audio.bluetooth.default \
     android.hardware.bluetooth.audio-impl
+
+# Shims & Vendor Dependencies (Fixes Widevine, netmgrd, ssgtzd linker crashes)
+PRODUCT_PACKAGES += \
+    android.system.net.netd@1.1.vendor \
+    libcrypto_shim \
+    libcurl.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
