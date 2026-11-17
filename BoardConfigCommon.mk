@@ -71,10 +71,7 @@ DEVICE_MANIFEST_FILE += \
     $(COMMON_PATH)/hidl/manifest_udfps.xml
 endif
 
-TARGET_BOARD_KERNEL_HEADERS := \
-    kernel/msm-5.4/techpack/display/include/uapi \
-    kernel/msm-5.4/include/uapi \
-    device/xiaomi/renoir-kernel-6.18/kernel-headers
+TARGET_BOARD_KERNEL_HEADERS := $(COMMON_PATH)/kernel-headers
 
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
