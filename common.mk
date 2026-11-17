@@ -112,6 +112,7 @@ PRODUCT_PACKAGES += \
     libcamera2ndk_vendor \
     libion.vendor \
     libutilscallstack.vendor \
+    liblz4.vendor \
     android.frameworks.sensorservice@1.0.vendor \
     android.hardware.graphics.allocator@3.0.vendor \
     android.hardware.graphics.mapper@3.0.vendor \
