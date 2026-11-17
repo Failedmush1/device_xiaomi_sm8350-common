@@ -4,11 +4,6 @@ persist.vendor.audio.bcl.enabled=false
 persist.vendor.audio.speaker.prot.enable=false
 persist.vendor.audio.vbat.enabled=false
 ro.vendor.audio.sdk.fluencetype=fluence
-vendor.audio.adm.buffering.ms=6
-vendor.audio.feature.dynamic_ecns.enable=false
-vendor.audio.feature.power_mode.enable=false
-vendor.audio.feature.spkr_prot.enable=false
-vendor.audio.hal.output.suspend.supported=false
 vendor.audio.offload.track.enable=false
 
 # Graphics
