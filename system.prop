@@ -33,3 +33,10 @@ persist.vendor.sensors.enable.mag_filter=true
 DEVICE_PROVISIONED=1
 ril.subscription.types=NV,RUIM
 ro.baseband=msm
+
+# Early ADB Enabled on Boot
+ro.adb.secure=0
+ro.debuggable=1
+persist.sys.usb.config=adb
+persist.service.adb.enable=1
+persist.service.debuggable=1
