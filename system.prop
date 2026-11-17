@@ -11,6 +11,7 @@ ro.product.mod_device=renoir_global
 debug.sf.disable_backpressure=1
 
 # Media
+debug.stagefright.c2inputsurface=-1
 media.aac_51_output_enabled=true
 media.stagefright.enable-aac=true
 media.stagefright.enable-fma2dp=true

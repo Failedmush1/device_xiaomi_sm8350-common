@@ -97,6 +97,7 @@ vendor.display.qdcm.mode_combine=2
 vendor.display.use_layer_ext=0
 
 # Media
+debug.stagefright.c2inputsurface=-1
 ro.config.vc_call_vol_steps=11
 
 # NFC
