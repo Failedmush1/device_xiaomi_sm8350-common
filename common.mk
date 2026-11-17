@@ -74,13 +74,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0.vendor \
     com.dsi.ant@1.0.vendor \
+    vendor.qti.hardware.btconfigstore@1.0.vendor \
+    vendor.qti.hardware.btconfigstore@2.0.vendor \
     audio.bluetooth.default \
     android.hardware.bluetooth.audio-impl
 
 # Shims & Vendor Dependencies (Fixes Widevine, netmgrd, ssgtzd linker crashes)
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor \
-    libcrypto_shim \
+    libcrypto_shim.vendor \
     libcurl.vendor
 
 PRODUCT_COPY_FILES += \
@@ -113,10 +115,10 @@ PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
     android.hardware.graphics.allocator@3.0.vendor \
     android.hardware.graphics.mapper@3.0.vendor \
+    Camera2
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera_cnf.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera_cnf.txt
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
     frameworks/native/data/etc/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml \
