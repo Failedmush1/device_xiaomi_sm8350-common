@@ -149,7 +149,6 @@ vendor.usb.use_ffs_mtp=1
 zygote.critical_window.minute=10
 
 # Audio & Codec stability
-vendor.audio.feature.battery_listener.enable=false
 debug.c2.use_dmabufheaps=0
 
 # Force USB ADB
