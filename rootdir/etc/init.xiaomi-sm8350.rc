@@ -22,6 +22,9 @@ on post-fs-data
     # Create data folder for nv_mac
     mkdir /data/vendor/mac_addr 0770 system wifi
 
+    # Create data folder for Widevine DRM
+    mkdir /data/vendor/mediadrm 0770 media mediadrm
+
 service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     override
     class hal
