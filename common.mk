@@ -247,9 +247,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/bin/init.qti.media.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.media.sh
-# Mlipay
 PRODUCT_PACKAGES += \
-    vendor.xiaomi.hardware.mlipay@1.1.vendor \
     vendor.xiaomi.hardware.mtdservice@1.0.vendor
 
 # Camera (VNDK libziparchive ABI fix for Android 15)
